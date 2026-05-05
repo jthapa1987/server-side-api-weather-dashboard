@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Weather Dashboard | 5‑Day Forecast & UV Index</title>
+<link rel = "stylesheet" href = "./assets/css/style.css">
+</head>
+<body>
+<div class="dashboard">
+  <div class="header">
+    <h1>
+      <span>🌤️</span> Weather Dashboard
+      <span>⛅</span>
+    </h1>
+  </div>
+  <div class="grid-layout">
+    <!-- Sidebar: API key, Search, History -->
+    <div class="sidebar">
+      <div class="api-section">
+        <div class="api-label">🔑 OpenWeather API Key</div>
+        <div class="api-control">
+          <input type="text" id="apiKeyInput" placeholder="Enter your API key" autocomplete="off">
+          <button id="saveApiKeyBtn">Save Key</button>
+        </div>
+        <div id="apiStatusMsg" class="api-status">⚙️ No key set — enter your OpenWeather API key</div>
+      </div>
+
+      <div class="search-area">
+        <h3>📍 Search for a City:</h3>
+        <div class="search-flex">
+          <input type="text" id="cityInput" placeholder="e.g., San Diego, Paris, Tokyo" autocomplete="off">
+          <button id="searchBtn">🔍 Search</button>
+        </div>
+      </div>
+
+      <div class="history-title">📜 Search History</div>
+      <div id="historyContainer" class="history-buttons">
+        <!-- dynamic history buttons appear here -->
+        <div style="color:#6c757d; font-size:0.8rem;">No recent cities</div>
+      </div>
+    </div>
+
+    <!-- Main Right: Current + 5-day forecast -->
+    <div class="main-content">
+      <div id="currentWeatherSection">
+        <!-- dynamically loaded current weather -->
+        <div class="current-card" style="text-align:center; background:#fef9ef;">
+          <div class="city-name">✨ Ready</div>
+          <div>Enter a city and set API key to see weather</div>
+        </div>
+      </div>
+      <div class="forecast-title">📅 5-Day Forecast</div>
+      <div id="forecastContainer" class="forecast-container">
+        <div class="forecast-card">— Forecast will appear —</div>
+      </div>
+    </div>
+  </div>
+  <footer>Powered by OpenWeather API • UV Index colored for safety • Data for planning your trip</footer>
+</div>
+
+<script src = "./assets/js/script.js">
+
+</script>
+</body>
+</html>
